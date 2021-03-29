@@ -6,12 +6,21 @@
   text-align: center;
 }
 
+img.linkedIn,
+img.gmail,
+img.discord {
+  width: 200px;
+}
+
 .container {
+  width: 100vw;
+  height: 100vh;
+
   display: grid;
   grid-template:
-    "linkedIn . gmail" 1fr
-    ". discord ." 1fr /
-    1fr 1fr 1fr;
+    "linkedIn  gmail" 1fr
+    "discord discord" 1fr /
+    1fr 1fr;
 }
 .linkedIn {
   grid-area: linkedIn;
@@ -21,4 +30,14 @@
 }
 .discord {
   grid-area: discord;
+}
+
+@media screen and (max-width: 500px) {
+  .container {
+    grid-template:
+      "linkedIn " 1fr
+      "gmail" 1fr
+      "discord " 1fr /
+      1fr 1fr;
+  }
 }
