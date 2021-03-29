@@ -44,3 +44,19 @@
   writing-mode: vertical-rl;
   text-orientation: upright;
 }
+
+@media screen and (max-width: 450px) {
+  .container {
+    grid-template:
+      "nav nav" 50px
+      "organisation-tools organisation-tools" 50px
+      "options options " 40px
+      "email-boxes main" 1fr/
+      1fr 2fr;
+  }
+
+  .orginisation-tools {
+    writing-mode: horizontal-tb;
+    text-orientation: upright;
+  }
+}
